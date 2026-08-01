@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Neopulp — mark rules</title>
+<meta name="description" content="How to use the Neopulp format mark: ink, type, clear space, minimum sizes, locked wording, and the never-do list." />
+<link rel="icon" href="assets/neopulp-seal-square.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root { --black:#0d0c0b; --acid:#e8ff4d; --stock:#f2f0eb; --rule:#d6d2c8; --dim:#6f6a61; --dimdark:#8a857c; --body:#3f3b34; --bodydark:#b9b3a8; }
+  * { box-sizing:border-box; }
+  html, body { margin:0; padding:0; }
+  body { background:var(--stock); color:var(--black); font-family:Archivo, system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:900px; margin:0 auto; padding:0 48px; }
+  .mono { font-family:'JetBrains Mono', ui-monospace, monospace; }
+  a { color:var(--black); text-decoration:none; box-shadow:inset 0 -0.45em 0 var(--acid); }
+  a:hover { box-shadow:inset 0 -1em 0 var(--acid); }
+  nav a { box-shadow:none; }
+  nav a:hover { box-shadow:none; color:var(--acid); }
+  h1,h2,h3 { margin:0; font-weight:900; letter-spacing:-0.035em; }
+  p, li { margin:0; font-size:16px; line-height:1.6; color:var(--body); }
+  ol, ul { margin:0; padding-left:1.3em; display:flex; flex-direction:column; gap:12px; }
+  section { border-top:1px solid var(--rule); padding:64px 0; display:flex; flex-direction:column; gap:26px; }
+  .num { font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--dim); }
+  table { border-collapse:collapse; width:100%; }
+  th, td { text-align:left; padding:12px 14px; border-bottom:1px solid var(--rule); font-size:14.5px; vertical-align:top; }
+  th { font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--dim); font-weight:400; }
+  td:first-child { font-family:'JetBrains Mono', monospace; font-size:12.5px; white-space:nowrap; }
+  code { font-family:'JetBrains Mono', monospace; font-size:13px; background:#e5e2d9; padding:1px 5px; }
+  .swatches { display:flex; gap:12px; }
+  .sw { flex:1; height:64px; }
+  .neverbox { background:var(--black); color:var(--stock); padding:28px 30px; display:flex; flex-direction:column; gap:14px; }
+  .neverbox .mono { font-size:12.5px; line-height:2.1; color:var(--bodydark); }
+  @media (max-width:720px) { .wrap { padding:0 24px; } h1 { font-size:44px !important; } }
+</style>
+</head>
+<body>
+
+<header style="background:var(--black); color:var(--stock);">
+  <div class="wrap" style="max-width:1120px; padding-top:26px; padding-bottom:26px; display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap;">
+    <a href="index.html" style="box-shadow:none; color:var(--stock); font-size:22px; font-weight:900; letter-spacing:-0.04em;">NEO<span style="background:var(--acid); color:var(--black); padding:0 3px;">PULP</span></a>
+    <nav class="mono" style="display:flex; gap:26px; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase;">
+      <a href="index.html" style="color:var(--stock);">Home</a>
+      <a href="index.html#assets" style="color:var(--acid);">Download assets</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap" style="padding-top:88px; padding-bottom:48px; display:flex; flex-direction:column; gap:26px;">
+  <div class="num">Mark rules &amp; specification</div>
+  <h1 style="font-size:62px; line-height:0.94;">How to use the mark</h1>
+  <p style="font-size:20px; line-height:1.5; color:var(--body);">Neopulp is a format, not a publisher. The mark is free to apply to your own book. Keep the promise, print the credit, and don't redraw the mark — everything below is the detail of those three rules.</p>
+</div>
+
+<div class="wrap">
+
+  <section>
+    <div class="num">01 · Ink</div>
+    <h2 style="font-size:30px;">Two inks and a stock. No third colour.</h2>
+    <div class="swatches">
+      <div class="sw" style="background:#0d0c0b;"></div>
+      <div class="sw" style="background:#e8ff4d;"></div>
+      <div class="sw" style="background:#f2f0eb; border:1px solid var(--rule);"></div>
+    </div>
+    <table>
+      <tr><th>Value</th><th>Name</th><th>Use</th></tr>
+      <tr><td>#0D0C0B</td><td>Press black</td><td>Type, rules, stamp keyline</td></tr>
+      <tr><td>#E8FF4D</td><td>Signal acid</td><td>Highlight and seed square only — never as type colour, never a field larger than the stamp</td></tr>
+      <tr><td>#F2F0EB</td><td>Bright white</td><td>Stock</td></tr>
+    </table>
+    <p>No tints, no gradients, no glow, no drop shadows.</p>
+  </section>
+
+  <section>
+    <div class="num">02 · Type</div>
+    <h2 style="font-size:30px;">Archivo and JetBrains Mono. Nothing else.</h2>
+    <table>
+      <tr><th>Face</th><th>Where</th></tr>
+      <tr><td>Archivo 900</td><td>Wordmark, titles, the reader promise</td></tr>
+      <tr><td>Archivo 700</td><td>Bylines</td></tr>
+      <tr><td>JetBrains Mono</td><td>Numbering, disclosure, all letterspaced small text</td></tr>
+    </table>
+    <p>Both are open-licence and free. Your book's interior can be set in anything — only the mark is fixed.</p>
+  </section>
+
+  <section>
+    <div class="num">03 · The seven rules</div>
+    <h2 style="font-size:30px;">What holds the mark together</h2>
+    <ol>
+      <li><strong>One word.</strong> NEOPULP — never spaced, never camel-cased, never hyphenated. Lowercase “neopulp” in running text, because it is a common noun.</li>
+      <li><strong>The highlight sits behind PULP only.</strong> The insult is the part that gets highlighted. Behind the whole word it becomes decoration and the argument disappears.</li>
+      <li><strong>Clear space</strong> equals the cap-height of the wordmark, on all four sides. Nothing enters it.</li>
+      <li><strong>Minimum sizes.</strong> Stamp 22mm wide in print, 96px on screen. Below that, use the badge. Wordmark never below 11px.</li>
+      <li><strong>The acid square is fixed.</strong> Same size relative to cap-height, always top-right of the stamp, always keylined.</li>
+      <li><strong>Never rotate the stamp.</strong> It is a certification, not a sticker.</li>
+      <li><strong>Never lock up with another movement mark.</strong> Not the same surface, not the same file.</li>
+    </ol>
+  </section>
+
+  <section>
+    <div class="num">04 · Sizes</div>
+    <h2 style="font-size:30px;">Three versions. Content is removed, never shrunk.</h2>
+    <table>
+      <tr><th>File</th><th>Size</th><th>Use</th></tr>
+      <tr><td>stamp-full</td><td>34mm+ / 130px+</td><td>Back covers, title pages. The only version carrying the reader promise</td></tr>
+      <tr><td>stamp-compact</td><td>22–34mm</td><td>Front covers with room. Promise drops, disclosure stays</td></tr>
+      <tr><td>stamp-badge</td><td>under 22mm</td><td>Spines, thumbnails, storefront listings, busy covers</td></tr>
+      <tr><td>seal-square</td><td>any</td><td>Avatars, favicons, app tiles, stickers. Never on a cover</td></tr>
+      <tr><td>wordmark-black / -reversed</td><td>11px+</td><td>Writing <em>about</em> the format: sites, posters, decks</td></tr>
+      <tr><td>wordmark-mono</td><td>11px+</td><td>One-ink print, foil, emboss, copyright pages</td></tr>
+    </table>
+    <p>The geometry never changes between sizes: keyline, wordmark left, acid square right, 2px rule, mono block at the foot.</p>
+  </section>
+
+  <section>
+    <div class="num">05 · On someone else's cover</div>
+    <h2 style="font-size:30px;">The only flexibility granted</h2>
+    <ul>
+      <li>The keyline and wordmark may take your cover's text colour.</li>
+      <li>The badge may sit on a solid stock field if your cover is busy — never keyline-only over artwork.</li>
+      <li>Any of the sizes, any corner, any edge.</li>
+    </ul>
+    <div class="neverbox">
+      <div class="mono" style="font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--acid);">Never, by anyone</div>
+      <div class="mono">THE ACID SQUARE RECOLOURED, REMOVED, OR RESIZED<br />ROTATED, ARCHED, OUTLINED, SHADOWED, OR TINTED<br />LARGER THAN THE AUTHOR'S NAME<br />ABOVE THE TITLE IN THE READING ORDER</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="num">06 · Locked wording</div>
+    <h2 style="font-size:30px;">The credit and the promise</h2>
+    <p><strong>Reader promise</strong> — on the stamp, back cover, and storefront line:</p>
+    <div style="font-size:26px; font-weight:900; letter-spacing:-0.03em; border-left:6px solid var(--acid); padding-left:18px;">One big premise, followed all the way.</div>
+    <p><strong>Credit line</strong> — title page, at byline scale, above the fold:</p>
+    <div style="border:2px solid var(--black); padding:24px 26px; display:flex; flex-direction:column; gap:14px;">
+      <div style="font-size:24px; font-weight:900; letter-spacing:-0.03em;">Seeded by [name]</div>
+      <div class="mono" style="font-size:12.5px; line-height:2; color:var(--body);">The premise, structure and direction of this book are [hers / his / theirs]. The sentences were written by a machine at [her / his / their] instruction.</div>
+    </div>
+    <p><strong>Shelf and search language:</strong> idea-first fiction.</p>
+    <div class="neverbox">
+      <div class="mono" style="font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--acid);">Never appears anywhere</div>
+      <div class="mono">“AI-ASSISTED” · “CO-CREATED” · “IN COLLABORATION WITH”<br />“AI-GENERATED” · ANY SENTENCE OPENING “WHILE SOME MAY…”</div>
+    </div>
+  </section>
+
+  <section>
+    <div class="num">07 · Series numbering</div>
+    <h2 style="font-size:30px;">Optional, and Arabic</h2>
+    <p><code>№ 004</code> in JetBrains Mono, at the head of the spine or top-left of the cover. Use it if you're publishing a sequence; skip it if you aren't.</p>
+  </section>
+
+  <section style="border-bottom:1px solid var(--rule);">
+    <div class="num">08 · Files</div>
+    <h2 style="font-size:30px;">Production notes</h2>
+    <ul>
+      <li>SVG for anything printed or resized; PNG at 4× for slides, social, and storefronts that reject vectors. Never scale a PNG up.</li>
+      <li>Convert type to outlines before sending to a printer, or install both typefaces.</li>
+      <li>Lockup widths are pinned with <code>textLength</code>, so proportions hold even where Archivo isn't installed.</li>
+    </ul>
+    <p><a href="index.html#assets">Download the asset pack →</a></p>
+  </section>
+
+</div>
+
+<footer style="background:var(--acid); color:var(--black); margin-top:0;">
+  <div class="wrap" style="max-width:1120px; padding-top:64px; padding-bottom:64px; display:flex; justify-content:space-between; align-items:flex-end; gap:32px; flex-wrap:wrap;">
+    <div style="font-size:40px; font-weight:900; letter-spacing:-0.04em; line-height:1; max-width:20ch;">Keep the promise. Print the credit.</div>
+    <div class="mono" style="font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase;"><a href="index.html" style="box-shadow:inset 0 -0.4em 0 rgba(13,12,11,0.13);">← Back to neopulp</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
