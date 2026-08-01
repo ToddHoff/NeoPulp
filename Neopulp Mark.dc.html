@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Bebas+Neue&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; background: #f2f0eb; }
+  * { box-sizing: border-box; }
+  a { color: #0d0c0b; text-decoration: none; box-shadow: inset 0 -0.5em 0 #e8ff4d; }
+  a:hover { box-shadow: inset 0 -1em 0 #e8ff4d; }
+</style>
+</helmet>
+
+<div style="background:#f2f0eb; color:#0d0c0b; font-family:Archivo, sans-serif; padding:0 0 140px;">
+  <div style="max-width:1180px; margin:0 auto; padding:0 48px;">
+
+    <div style="padding:88px 0 56px; display:flex; flex-direction:column; gap:34px; border-bottom:6px solid #0d0c0b;">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:32px; flex-wrap:wrap; font-family:'JetBrains Mono', monospace; font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:#6f6a61;">
+        <div style="display:flex; gap:22px; flex-wrap:wrap;"><span>Direction 1a · locked</span><span>Format mark + reader promise</span></div>
+        <div><a href="Neopulp Identity.dc.html">Exploration &amp; rejected directions →</a></div>
+      </div>
+      <div style="font-size:112px; line-height:0.86; font-weight:900; letter-spacing:-0.05em;">NEO<span style="background:#e8ff4d; padding:0 8px;">PULP</span></div>
+      <div style="display:grid; grid-template-columns:1.15fr 1fr; gap:56px; align-items:end;">
+        <div style="font-size:21px; line-height:1.45; color:#3f3b34; text-wrap:pretty;">A mark you don't own the use of. Anyone publishing to the format applies it to their own book, in their own typography, and the mark still has to work — so every rule here is written to survive being applied by someone with no taste and no brief.</div>
+        <div style="font-size:32px; font-weight:900; letter-spacing:-0.03em; line-height:1.1; border-left:6px solid #e8ff4d; padding-left:20px;">{{ readerPromise }}</div>
+      </div>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:28px; padding:28px 0 96px; border-bottom:1px solid #d6d2c8;">
+      <div style="display:flex; flex-direction:column; gap:8px;"><div style="font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:0.16em; text-transform:uppercase; color:#6f6a61;">Ink</div><div style="font-family:'JetBrains Mono', monospace; font-size:12px; line-height:1.9;">#0D0C0B<br />#E8FF4D<br />#F2F0EB</div></div>
+      <div style="display:flex; flex-direction:column; gap:8px;"><div style="font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:0.16em; text-transform:uppercase; color:#6f6a61;">Type</div><div style="font-family:'JetBrains Mono', monospace; font-size:12px; line-height:1.9;">Archivo 900 / 700<br />JetBrains Mono<br />Nothing else</div></div>
+      <div style="display:flex; flex-direction:column; gap:8px;"><div style="font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:0.16em; text-transform:uppercase; color:#6f6a61;">Minimums</div><div style="font-family:'JetBrains Mono', monospace; font-size:12px; line-height:1.9;">Stamp 22mm / 96px<br />Wordmark 11px<br />Clear space = cap-height</div></div>
+      <div style="display:flex; flex-direction:column; gap:8px;"><div style="font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:0.16em; text-transform:uppercase; color:#6f6a61;">Shelf language</div><div style="font-family:'JetBrains Mono', monospace; font-size:12px; line-height:1.9;">idea-first fiction<br />“it's a neopulp”<br />{{ creditPrefix }}</div></div>
+    </div>
+
+    <!-- ===== WORDMARK ===== -->
+    <div style="padding:80px 0; display:flex; flex-direction:column; gap:44px; border-bottom:1px solid #d6d2c8;">
+      <div style="display:flex; align-items:baseline; gap:20px;">
+        <div style="font-family:'JetBrains Mono', monospace; font-size:12px; letter-spacing:0.16em; color:#6f6a61;">01</div>
+        <div style="font-size:38px; font-weight:900; letter-spacing:-0.035em;">Wordmark &amp; construction</div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1.5fr 1fr; gap:56px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div style="position:relative; background:#fff; border:1px solid #d6d2c8; padding:56px;">
+            <div style="position:relative; display:inline-block;">
+              <div style="position:absolute; inset:-52px; border:1px dashed #b9b3a8;"></div>
+              <div style="position:absolute; left:-52px; right:-52px; top:0; height:1px; background:#e8ff4d;"></div>
+              <div style="position:absolute; left:-52px; right:-52px; bottom:0; height:1px; background:#e8ff4d;"></div>
+              <div style="font-size:72px; font-weight:900; letter-spacing:-0.05em; line-height:0.72; position:relative;">NEO<span style="background:#e8ff4d; padding:0 5px;">PULP</span></div>
+            </div>
+          </div>
+          <div style="display:flex; gap:28px; flex-wrap:wrap; font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:0.1em; color:#6f6a61;">
+            <span>DASHED = CLEAR SPACE, ONE CAP-HEIGHT ALL SIDES</span><span>ACID RULES = CAP LINE / BASELINE</span>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:22px; font-size:15px; line-height:1.55; color:#3f3b34;">
+          <div><strong style="color:#0d0c0b;">One word.</strong> Never spaced, never camel-cased, never hyphenated. Uppercase in the mark; lowercase “neopulp” in running text, because the goal is a common noun.</div>
+          <div><strong style="color:#0d0c0b;">Highlight behind PULP only.</strong> The insult is the part that gets highlighted. Behind the whole word it reads as decoration and the argument disappears.</div>
+          <div><strong style="color:#0d0c0b;">Tracking −0.05em, weight 900.</strong> The block is padded to the cap-height, bleeding 4% above and below so it reads as ink, not as a UI chip.</div>
+          <div style="border-top:1px solid #d6d2c8; padding-top:20px;"><strong style="color:#0d0c0b;">Never:</strong> outline, drop shadow, gradient, rotation, arched type, or a third colour. Never the acid as type colour.</div>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:20px;">
+        <div style="border:1px solid #d6d2c8; background:#fff; padding:26px; display:flex; flex-direction:column; gap:20px; justify-content:space-between;">
+          <div style="font-size:34px; font-weight:900; letter-spacing:-0.05em;">NEO<span style="background:#e8ff4d; padding:0 3px;">PULP</span></div>
+          <div style="font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:0.1em; line-height:1.8; color:#6f6a61;">PRIMARY<br />LIGHT SURFACES</div>
+        </div>
+        <div style="background:#0d0c0b; padding:26px; display:flex; flex-direction:column; gap:20px; justify-content:space-between;">
+          <div style="font-size:34px; font-weight:900; letter-spacing:-0.05em; color:#f2f0eb;">NEO<span style="background:#e8ff4d; color:#0d0c0b; padding:0 3px;">PULP</span></div>
+          <div style="font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:0.1em; line-height:1.8; color:#8a857c;">REVERSED<br />NEO GOES STOCK, PULP STAYS BLACK</div>
+        </div>
+        <div style="border:1px solid #d6d2c8; background:#fff; padding:26px; display:flex; flex-direction:column; gap:20px; justify-content:space-between;">
+          <div style="font-size:34px; font-weight:900; letter-spacing:-0.05em;">NEOPULP</div>
+          <div style="font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:0.1em; line-height:1.8; color:#6f6a61;">MONO<br />ONE-INK PRINT · EMBOSS · LEGAL PAGES</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== STAMP ===== -->
+    <div style="padding:80px 0; display:flex; flex-direction:column; gap:44px; border-bottom:1px solid #d6d2c8;">
+      <div style="display:flex; align-items:baseline; gap:20px; flex-wrap:wrap;">
+        <div style="font-family:'JetBrains Mono', monospace; font-size:12px; letter-spacing:0.16em; color:#6f6a61;">02</div>
+        <div style="font-size:38px; font-weight:900; letter-spacing:-0.035em;">The stamp, at three sizes</div>
+        <div style="font-family:'JetBrains Mono', monospace; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:#6f6a61;">Promise above disclosure — always that order</div>
+      </div>
+
+      <div style="display:flex; gap:36px; align-items:flex-start; flex-wrap:wrap;">
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div id="stamp-full" style="border:3px solid #0d0c0b; padding:16px 18px; display:flex; flex-direction:column; gap:10px; width:260px; background:#fff;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <div style="font-size:19px; font-weight:900; letter-spacing:-0.02em;">NEOPULP</div>
+              <div style="width:14px; height:14px; background:#e8ff4d; border:2px solid #0d0c0b;"></div>
+            </div>
+            <div style="height:2px; background:#0d0c0b;"></div>
+            <div style="font-size:14px; font-weight:700; letter-spacing:-0.01em; line-height:1.25;">{{ readerPromise }}</div>
+            <div style="font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.1em; line-height:1.7; color:#4a463f;">HUMAN IDEA · MACHINE PROSE<br />FORMAT MARK · EST. 2026</div>
+          </div>
+          <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.1em; line-height:1.8; color:#6f6a61;">FULL<br />34MM AND UP</div>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div id="stamp-compact" style="border:3px solid #0d0c0b; padding:14px 16px; display:flex; flex-direction:column; gap:9px; width:196px; background:#fff;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <div style="font-size:16px; font-weight:900; letter-spacing:-0.02em;">NEOPULP</div>
+              <div style="width:12px; height:12px; background:#e8ff4d; border:2px solid #0d0c0b;"></div>
+            </div>
+            <div style="height:2px; background:#0d0c0b;"></div>
+            <div style="font-family:'JetBrains Mono', monospace; font-size:8.5px; letter-spacing:0.1em; line-height:1.7; color:#4a463f;">HUMAN IDEA · MACHINE PROSE<br />FORMAT MARK · EST. 2026</div>
+          </div>
+          <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.1em; line-height:1.8; color:#6f6a61;">COMPACT<br />22–34MM · PROMISE DROPS</div>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div id="stamp-badge" style="border:2.5px solid #0d0c0b; padding:7px 9px; display:flex; align-items:center; gap:12px; width:124px; background:#fff;">
+            <div style="font-size:13px; font-weight:900; letter-spacing:-0.02em;">NEOPULP</div>
+            <div style="width:9px; height:9px; background:#e8ff4d; border:1.5px solid #0d0c0b; flex-shrink:0;"></div>
+          </div>
+          <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.1em; line-height:1.8; color:#6f6a61;">BADGE<br />UNDER 22MM · SPINES</div>
+        </div>
+
+        <div style="flex:1 1 300px; min-width:300px; display:flex; flex-direction:column; gap:18px; font-size:14.5px; line-height:1.55; color:#3f3b34;">
+          <div>Three sizes, one geometry: keyline, wordmark left, acid square right, 2px rule, mono block at the foot. Nothing is re-proportioned between sizes — content is <em style="font-style:normal; font-weight:700; color:#0d0c0b;">removed</em>, never shrunk.</div>
+          <div>The square never moves and never loses its keyline. It's the only element a reader can identify at 40px, which makes it the actual mark.</div>
+          <div style="border-top:1px solid #d6d2c8; padding-top:16px;"><strong style="color:#0d0c0b;">Never rotate the stamp.</strong> Tilt belongs to the Slopcore campaign, and Slopcore never touches a product.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== CERTIFICATION CASE ===== -->
+    <div style="padding:80px 0; display:flex; flex-direction:column; gap:44px; border-bottom:1px solid #d6d2c8;">
+      <div style="display:flex; align-items:baseline; gap:20px; flex-wrap:wrap;">
+        <div style="font-family:'JetBrains Mono', monospace; font-size:12px; letter-spacing:0.16em; color:#6f6a61;">03</div>
+        <div style="font-size:38px; font-weight:900; letter-spacing:-0.035em;">Applied to someone else's book</div>
+      </div>
+      <div style="font-size:18px; line-height:1.5; color:#3f3b34; max-width:74ch; text-wrap:pretty;">The real test. None of these covers use our typography, our palette, or our layout — one is a literary hardback, one is a self-published thriller with a garish stock treatment, one is austere and expensive. The mark has to sit on all three without competing, without endorsing the taste, and without being mistaken for the publisher.</div>
+
+      <div style="display:flex; gap:32px; flex-wrap:wrap;">
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div style="width:280px; height:420px; background:#1f2a33; color:#efe8dc; padding:34px 28px; display:flex; flex-direction:column; justify-content:space-between; font-family:'EB Garamond', serif;">
+            <div style="font-size:13px; letter-spacing:0.2em; text-transform:uppercase; color:#9fb0bd;">Fenwright &amp; Sons</div>
+            <div style="display:flex; flex-direction:column; gap:22px;">
+              <div style="font-size:44px; line-height:1.02; font-style:italic;">The Salt Cathedral</div>
+              <div style="width:44px; height:1px; background:#9fb0bd;"></div>
+              <div style="font-size:19px; letter-spacing:0.06em;">Marielle Okonjo</div>
+            </div>
+            <div style="border:2.5px solid #efe8dc; padding:6px 8px; display:flex; align-items:center; gap:10px; align-self:flex-start; font-family:Archivo, sans-serif;">
+              <div style="font-size:12px; font-weight:900; letter-spacing:-0.02em;">NEOPULP</div>
+              <div style="width:9px; height:9px; background:#e8ff4d; border:1.5px solid #efe8dc; flex-shrink:0;"></div>
+            </div>
+          </div>
+          <div style="font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:0.1em; line-height:1.9; color:#6f6a61;">LITERARY HARDBACK<br />BADGE, KEYLINE TAKES THE HOST'S<br />TEXT COLOUR. ACID SURVIVES.</div>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div style="width:280px; height:420px; background:linear-gradient(#7a1420, #2b0a10); color:#fff; padding:0; display:flex; flex-direction:column; justify-content:space-between; position:relative; overflow:hidden;">
+            <div style="padding:26px 22px 0; display:flex; flex-direction:column; gap:6px; text-align:center;">
+              <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.24em; color:#ffb300;">THE #1 BESTSELLER</div>
+              <div style="font-family:'Bebas Neue', sans-serif; font-size:58px; line-height:0.9; letter-spacing:0.01em; text-shadow:0 3px 0 #000;">A LOADED GUN<br />IN ACT ONE</div>
+            </div>
+            <div style="flex:1; margin:14px 22px; background:repeating-linear-gradient(135deg, rgba(255,255,255,0.06) 0 8px, rgba(0,0,0,0.14) 8px 16px); border:1px solid rgba(255,255,255,0.18); display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.16em; color:rgba(255,255,255,0.45);">STOCK PHOTO</div>
+            <div style="padding:0 22px 22px; display:flex; align-items:flex-end; justify-content:space-between; gap:12px;">
+              <div style="font-family:'Bebas Neue', sans-serif; font-size:26px; letter-spacing:0.02em;">R. HALVORSEN</div>
+              <div style="background:#f2f0eb; padding:5px 7px; display:flex; align-items:center; gap:8px; flex-shrink:0;">
+                <div style="font-size:11px; font-weight:900; letter-spacing:-0.02em; color:#0d0c0b;">NEOPULP</div>
+                <div style="width:8px; height:8px; background:#e8ff4d; border:1.5px solid #0d0c0b;"></div>
+              </div>
+            </div>
+          </div>
+          <div style="font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:0.1em; line-height:1.9; color:#6f6a61;">SELF-PUB THRILLER<br />BUSY HOST → BADGE GETS A SOLID<br />STOCK FIELD. NEVER KEYLINE-ONLY.</div>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div style="width:280px; height:420px; background:#e7e3d8; color:#22201c; padding:30px 26px; display:flex; flex-direction:column; justify-content:space-between; font-family:'EB Garamond', serif;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.18em; color:#8b857a;"><span>SERIES 04</span><span>ROSEMOOR</span></div>
+            <div style="display:flex; flex-direction:column; gap:18px; align-items:flex-start;">
+              <div style="width:100%; height:1px; background:#22201c;"></div>
+              <div style="font-size:37px; line-height:1.06;">Nine Ways to Leave Mars</div>
+              <div style="font-size:15px; letter-spacing:0.14em; text-transform:uppercase; color:#5c574d;">Deva Amari</div>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:10px; align-items:flex-start; font-family:Archivo, sans-serif;">
+              <div style="border:2.5px solid #22201c; padding:11px 13px; display:flex; flex-direction:column; gap:8px; width:186px;">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <div style="font-size:15px; font-weight:900; letter-spacing:-0.02em;">NEOPULP</div>
+                  <div style="width:11px; height:11px; background:#e8ff4d; border:2px solid #22201c;"></div>
+                </div>
+                <div style="height:2px; background:#22201c;"></div>
+                <div style="font-family:'JetBrains Mono', monospace; font-size:8px; letter-spacing:0.1em; line-height:1.7; color:#5c574d;">HUMAN IDEA · MACHINE PROSE</div>
+              </div>
+            </div>
+          </div>
+          <div style="font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:0.1em; line-height:1.9; color:#6f6a61;">AUSTERE / ART PRESS<br />COMPACT STAMP FITS. KEYLINE MAY<br />ADOPT HOST BLACK, NEVER HOST HUE.</div>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px; padding-top:20px;">
+        <div style="border:2px solid #0d0c0b; padding:26px 28px; display:flex; flex-direction:column; gap:16px;">
+          <div style="font-size:20px; font-weight:900; letter-spacing:-0.02em;">THE ONLY FLEXIBILITY GRANTED</div>
+          <div style="font-family:'JetBrains Mono', monospace; font-size:12px; line-height:2.1; color:#3f3b34;">KEYLINE + WORDMARK MAY TAKE THE HOST'S TEXT COLOUR<br />BADGE MAY SIT ON A SOLID STOCK FIELD IF THE HOST IS BUSY<br />ANY OF THE THREE SIZES, ANY CORNER, ANY EDGE</div>
+        </div>
+        <div style="background:#0d0c0b; color:#f2f0eb; padding:26px 28px; display:flex; flex-direction:column; gap:16px;">
+          <div style="font-size:20px; font-weight:900; letter-spacing:-0.02em; color:#e8ff4d;">NEVER, BY ANYONE</div>
+          <div style="font-family:'JetBrains Mono', monospace; font-size:12px; line-height:2.1; color:#b9b3a8;">THE ACID SQUARE RECOLOURED, REMOVED, OR RESIZED<br />ROTATED, ARCHED, OUTLINED, SHADOWED, OR TINTED<br />LARGER THAN THE AUTHOR'S NAME<br />ABOVE THE TITLE IN THE READING ORDER</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== TITLE PAGE + WORDING ===== -->
+    <div style="padding:80px 0; display:flex; flex-direction:column; gap:44px; border-bottom:1px solid #d6d2c8;">
+      <div style="display:flex; align-items:baseline; gap:20px; flex-wrap:wrap;">
+        <div style="font-family:'JetBrains Mono', monospace; font-size:12px; letter-spacing:0.16em; color:#6f6a61;">04</div>
+        <div style="font-size:38px; font-weight:900; letter-spacing:-0.035em;">Locked wording</div>
+        <div style="font-family:'JetBrains Mono', monospace; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:#6f6a61;">Disclosure as credit</div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:auto 1fr; gap:48px; align-items:start;">
+        <div style="width:400px; background:#fff; border:1px solid #d6d2c8; padding:56px 50px; display:flex; flex-direction:column; gap:36px; min-height:420px;">
+          <div style="font-size:40px; font-weight:900; letter-spacing:-0.04em; line-height:0.9; text-transform:uppercase;">The Salt<br />Cathedral</div>
+          <div style="display:flex; flex-direction:column; gap:6px;">
+            <div style="font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:#6f6a61;">{{ creditPrefix }}</div>
+            <div style="font-size:27px; font-weight:700; letter-spacing:-0.02em;">Marielle Okonjo</div>
+          </div>
+          <div style="margin-top:auto; display:flex; flex-direction:column; gap:14px; align-items:flex-start; border-top:2px solid #0d0c0b; padding-top:18px;">
+            <div style="border:2px solid #0d0c0b; padding:5px 7px; display:flex; align-items:center; gap:7px; flex-shrink:0;">
+              <div style="font-size:11px; font-weight:900; letter-spacing:-0.01em;">NEOPULP</div>
+              <div style="width:8px; height:8px; background:#e8ff4d; border:1.5px solid #0d0c0b;"></div>
+            </div>
+            <div style="font-family:'JetBrains Mono', monospace; font-size:9.5px; line-height:1.85; letter-spacing:0.04em; color:#4a463f;">The premise, structure and direction of this book are hers. The sentences were written by a machine at her instruction.</div>
+          </div>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:26px;">
+          <div style="display:flex; flex-direction:column; gap:10px;">
+            <div style="font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:0.16em; text-transform:uppercase; color:#6f6a61;">Credit, at byline scale, above the fold</div>
+            <div style="font-size:22px; font-weight:900; letter-spacing:-0.025em;">{{ creditPrefix }} [name]</div>
+            <div style="font-size:15px; line-height:1.55; color:#3f3b34; max-width:62ch;">Then two sentences, present tense, no hedging. Both name what the human did before naming what the machine did. Never “assisted”, never a parenthetical.</div>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:10px; border-top:1px solid #d6d2c8; padding-top:22px;">
+            <div style="font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:0.16em; text-transform:uppercase; color:#6f6a61;">Back cover &amp; storefront</div>
+            <div style="font-size:22px; font-weight:900; letter-spacing:-0.025em;">{{ readerPromise }}</div>
+            <div style="font-size:15px; line-height:1.55; color:#3f3b34; max-width:62ch;">Takes the slot a genre line usually takes. The blurb then states the premise plainly and claims the author followed it — because the premise is what she made. Search and category language: <strong>idea-first fiction</strong>.</div>
+          </div>
+          <div style="background:#0d0c0b; color:#f2f0eb; padding:24px 26px; display:flex; flex-direction:column; gap:12px;">
+            <div style="font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:0.16em; text-transform:uppercase; color:#e8ff4d;">Never appears anywhere</div>
+            <div style="font-family:'JetBrains Mono', monospace; font-size:12px; line-height:2; color:#b9b3a8;">“AI-ASSISTED” · “CO-CREATED” · “IN COLLABORATION WITH”<br />“AI-GENERATED” · ANY SENTENCE OPENING “WHILE SOME MAY…”<br />THE WORD SLOP, IN OUR OWN VOICE, ON A PRODUCT</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== ASSETS ===== -->
+    <div style="padding:80px 0 0; display:flex; flex-direction:column; gap:40px;">
+      <div style="display:flex; align-items:baseline; gap:20px; flex-wrap:wrap;">
+        <div style="font-family:'JetBrains Mono', monospace; font-size:12px; letter-spacing:0.16em; color:#6f6a61;">05</div>
+        <div style="font-size:38px; font-weight:900; letter-spacing:-0.035em;">Asset pack</div>
+        <div style="font-family:'JetBrains Mono', monospace; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:#6f6a61;">SVG + 4× PNG + written rules · <a href="assets/ASSETS.md">assets/ASSETS.md</a></div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:2px; background:#d6d2c8; border:1px solid #d6d2c8;">
+        <div style="background:#fff; padding:22px; display:flex; flex-direction:column; gap:16px; justify-content:space-between; min-height:150px;">
+          <img src="assets/neopulp-wordmark-black.svg" alt="Neopulp wordmark, black" style="width:100%; height:auto;" />
+          <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.08em; color:#6f6a61;">WORDMARK-BLACK.SVG</div>
+        </div>
+        <div style="background:#0d0c0b; padding:22px; display:flex; flex-direction:column; gap:16px; justify-content:space-between; min-height:150px;">
+          <img src="assets/neopulp-wordmark-reversed.svg" alt="Neopulp wordmark, reversed" style="width:100%; height:auto;" />
+          <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.08em; color:#8a857c;">WORDMARK-REVERSED.SVG</div>
+        </div>
+        <div style="background:#fff; padding:22px; display:flex; flex-direction:column; gap:16px; justify-content:space-between; min-height:150px;">
+          <img src="assets/neopulp-wordmark-mono.svg" alt="Neopulp wordmark, one ink" style="width:100%; height:auto;" />
+          <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.08em; color:#6f6a61;">WORDMARK-MONO.SVG</div>
+        </div>
+        <div style="background:#fff; padding:22px; display:flex; flex-direction:column; gap:16px; justify-content:space-between; min-height:150px; align-items:flex-start;">
+          <img src="assets/neopulp-seal-square.svg" alt="Neopulp square seal" style="width:82px; height:82px;" />
+          <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.08em; color:#6f6a61;">SEAL-SQUARE.SVG</div>
+        </div>
+        <div style="background:#fff; padding:22px; display:flex; flex-direction:column; gap:16px; justify-content:space-between; min-height:150px;">
+          <img src="assets/neopulp-stamp-full.svg" alt="Neopulp full stamp" style="width:100%; height:auto;" />
+          <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.08em; color:#6f6a61;">STAMP-FULL.SVG</div>
+        </div>
+        <div style="background:#0d0c0b; padding:22px; display:flex; flex-direction:column; gap:16px; justify-content:space-between; min-height:150px;">
+          <img src="assets/neopulp-stamp-full-reversed.svg" alt="Neopulp full stamp, reversed" style="width:100%; height:auto;" />
+          <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.08em; color:#8a857c;">STAMP-FULL-REVERSED.SVG</div>
+        </div>
+        <div style="background:#fff; padding:22px; display:flex; flex-direction:column; gap:16px; justify-content:space-between; min-height:150px;">
+          <img src="assets/neopulp-stamp-compact.svg" alt="Neopulp compact stamp" style="width:100%; height:auto;" />
+          <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.08em; color:#6f6a61;">STAMP-COMPACT.SVG</div>
+        </div>
+        <div style="background:#fff; padding:22px; display:flex; flex-direction:column; gap:16px; justify-content:space-between; min-height:150px;">
+          <img src="assets/neopulp-stamp-badge.svg" alt="Neopulp badge" style="width:100%; height:auto;" />
+          <div style="font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.08em; color:#6f6a61;">STAMP-BADGE.SVG</div>
+        </div>
+      </div>
+
+      <div style="font-size:14.5px; line-height:1.6; color:#3f3b34; max-width:80ch;">Lockup widths are pinned with <span style="font-family:'JetBrains Mono', monospace; font-size:13px;">textLength</span>, so proportions hold even where Archivo isn't installed. Outline the type before sending to a printer. Both typefaces are open-licence.</div>
+    </div>
+
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;creditPrefix&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Seeded by&quot;,&quot;Idea by&quot;,&quot;Premise by&quot;,&quot;Conceived by&quot;,&quot;Sown by&quot;],&quot;default&quot;:&quot;Seeded by&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Locked wording&quot;},&quot;readerPromise&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;One big premise, followed all the way.&quot;,&quot;Big idea. Fast read. No filler.&quot;,&quot;Read it in a night. Argue about it for a week.&quot;],&quot;default&quot;:&quot;One big premise, followed all the way.&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Locked wording&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const prefix = this.props.creditPrefix ?? "Seeded by";
+    return {
+      creditPrefix: prefix,
+      creditPrefixShort: prefix.toUpperCase(),
+      readerPromise: this.props.readerPromise ?? "One big premise, followed all the way.",
+    };
+  }
+}
+</script>
+</body>
+</html>
