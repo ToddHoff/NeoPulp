@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Neopulp — the books</title>
+<meta name="description" content="The neopulp shelf: books whose premise, structure and ending belong to a person, and whose sentences were written by a machine at that person's instruction." />
+<link rel="icon" href="assets/neopulp-seal-square.svg" />
+<meta property="og:title" content="Neopulp — the books" />
+<meta property="og:description" content="Every book here started as an idea." />
+<meta property="og:image" content="assets/png/neopulp-seal-square.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root { --black:#0d0c0b; --acid:#e8ff4d; --stock:#f2f0eb; --rule:#d6d2c8; --dim:#6f6a61; --dimdark:#8a857c; --body:#3f3b34; --bodydark:#b9b3a8; }
+  * { box-sizing:border-box; }
+  html, body { margin:0; padding:0; }
+  body { background:var(--stock); color:var(--black); font-family:Archivo, system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:1120px; margin:0 auto; padding:0 48px; }
+  .mono { font-family:'JetBrains Mono', ui-monospace, monospace; }
+  a { color:var(--black); text-decoration:none; box-shadow:inset 0 -0.45em 0 var(--acid); }
+  a:hover { box-shadow:inset 0 -1em 0 var(--acid); }
+  nav a { box-shadow:none; }
+  nav a:hover { box-shadow:none; color:var(--acid); }
+  h1, h2, h3 { margin:0; font-weight:900; letter-spacing:-0.04em; }
+  p { margin:0; }
+  .dark { background:var(--black); color:var(--stock); }
+  .kicker { font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--dim); }
+
+  /* ---- the shelf ---- */
+  .shelfgrid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:#2a2724; border:1px solid #2a2724; }
+  .book { background:#161412; padding:28px 26px; display:flex; flex-direction:column; gap:20px; box-shadow:none; transition:background 120ms; }
+  a.book:hover { background:#1e1b18; box-shadow:none; }
+  .book .cover { aspect-ratio:2/3; width:100%; object-fit:cover; display:block; background:#0d0c0b; }
+  .book .title { font-size:21px; font-weight:900; letter-spacing:-0.03em; line-height:1.1; color:var(--stock); }
+  .book .seeded { font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--acid); }
+  .book .premise { font-size:14px; line-height:1.55; color:var(--bodydark); }
+  .book .go { font-family:'JetBrains Mono', monospace; font-size:9.5px; letter-spacing:0.12em; text-transform:uppercase; margin-top:auto; }
+  .book .go span { background:var(--acid); color:var(--black); padding:3px 6px; }
+
+  /* open slot — the empty-shelf card */
+  .slot { background:transparent; border:1.5px dashed var(--dimdark); margin:-1px; padding:28px 26px; display:flex; flex-direction:column; justify-content:space-between; gap:20px; min-height:420px; }
+  .slot .badge { border:2.5px solid var(--stock); color:var(--stock); padding:6px 8px; display:flex; align-items:center; gap:9px; align-self:flex-start; font-weight:900; font-size:13px; letter-spacing:-0.02em; }
+  .slot .sq { width:9px; height:9px; background:var(--acid); border:1.5px solid var(--stock); flex-shrink:0; }
+
+  @media (max-width:940px) {
+    .wrap { padding:0 24px; }
+    .shelfgrid { grid-template-columns:1fr 1fr; }
+    h1 { font-size:52px !important; }
+  }
+  @media (max-width:620px) {
+    .shelfgrid { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="dark">
+  <div class="wrap" style="padding-top:26px; padding-bottom:26px; display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap;">
+    <div style="font-size:22px; font-weight:900; letter-spacing:-0.04em;"><a href="index.html" style="box-shadow:none; color:var(--stock);">NEO<span style="background:var(--acid); color:var(--black); padding:0 3px;">PULP</span></a></div>
+    <nav class="mono" style="display:flex; gap:26px; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase;">
+      <a href="index.html" style="color:var(--stock);">Home</a>
+      <a href="book-page.html" style="color:var(--stock);">Reader page</a>
+      <a href="rules.html" style="color:var(--stock);">Mark rules</a>
+      <a href="index.html#assets" style="color:var(--acid);">Download assets</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap" style="padding-top:88px; padding-bottom:64px; display:flex; flex-direction:column; gap:26px;">
+  <div class="kicker">The books</div>
+  <h1 style="font-size:62px; line-height:0.94; max-width:24ch; text-wrap:balance;">Every book here started as an idea<span style="color:var(--acid);">.</span></h1>
+  <p style="font-size:20px; line-height:1.5; color:var(--body); max-width:62ch; text-wrap:pretty;">This is the neopulp shelf — books made in the new medium, credited on the title page, keeping the promise. The shelf is new and it is short. That won't last: the medium is finally cheap enough to try things in, and the first books are being seeded now.</p>
+</div>
+
+<section class="dark" style="border-top:8px solid var(--acid);">
+  <div class="wrap" style="padding-top:72px; padding-bottom:88px; display:flex; flex-direction:column; gap:40px;">
+    <div class="mono" style="font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--acid);">On the shelf</div>
+
+    <div class="shelfgrid">
+
+      <!-- ============================================================
+           BOOK CARD TEMPLATE — copy, uncomment, fill in, done.
+           Cover images live in assets/covers/ at 2:3 (e.g. 800×1200).
+           Keep the premise to one or two sentences. The link can point
+           to a store page, a book site, or a free download.
+
+      <a class="book" href="LINK-TO-BOOK">
+        <img class="cover" src="assets/covers/SLUG.jpg" alt="Cover of TITLE" />
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div class="title">TITLE</div>
+          <div class="seeded">Seeded by NAME</div>
+          <p class="premise">ONE-LINE PREMISE.</p>
+        </div>
+        <div class="go"><span>Get the book →</span></div>
+      </a>
+      ============================================================ -->
+
+      <div class="slot">
+        <div class="badge"><span class="sq"></span>NEOPULP</div>
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <div class="title" style="font-size:24px; font-weight:900; letter-spacing:-0.03em; line-height:1.1; color:var(--stock);">This slot is open.</div>
+          <p class="premise" style="font-size:14px; line-height:1.55; color:var(--bodydark);">The first neopulps are being seeded now. Made one? Keep the promise, print the credit, and it belongs here.</p>
+          <div class="mono" style="font-size:9.5px; letter-spacing:0.12em; text-transform:uppercase;"><a href="index.html#apply" style="color:var(--stock); box-shadow:inset 0 -0.4em 0 rgba(232,255,77,0.25);">Apply the mark →</a></div>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="font-size:15px; line-height:1.6; color:var(--bodydark); max-width:60ch;">A book isn't good because a human wrote every word, and it isn't bad because a machine wrote any of them. A book is good or it isn't. The shelf exists so you can decide.</p>
+  </div>
+</section>
+
+<footer style="background:var(--acid); color:var(--black);">
+  <div class="wrap" style="padding-top:64px; padding-bottom:64px; display:flex; justify-content:space-between; align-items:flex-end; gap:32px; flex-wrap:wrap;">
+    <div style="font-size:40px; font-weight:900; letter-spacing:-0.04em; line-height:1; max-width:20ch;">Not the best of it. More of it.</div>
+    <div class="mono" style="font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase;"><a href="index.html" style="box-shadow:inset 0 -0.4em 0 rgba(13,12,11,0.13);">← Back to neopulp</a></div>
+  </div>
+</footer>
+
+</body>
+</html>

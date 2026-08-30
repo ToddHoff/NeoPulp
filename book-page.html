@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Neopulp — the reader page</title>
+<meta name="description" content="A ready-made page for your book's back matter that tells the reader what a neopulp is, with a QR code to this site. Copy the text or take the print-ready PDF." />
+<link rel="icon" href="assets/neopulp-seal-square.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root { --black:#0d0c0b; --acid:#e8ff4d; --stock:#f2f0eb; --rule:#d6d2c8; --dim:#6f6a61; --dimdark:#8a857c; --body:#3f3b34; --bodydark:#b9b3a8; }
+  * { box-sizing:border-box; }
+  html, body { margin:0; padding:0; }
+  body { background:var(--stock); color:var(--black); font-family:Archivo, system-ui, sans-serif; -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:900px; margin:0 auto; padding:0 48px; }
+  .mono { font-family:'JetBrains Mono', ui-monospace, monospace; }
+  a { color:var(--black); text-decoration:none; box-shadow:inset 0 -0.45em 0 var(--acid); }
+  a:hover { box-shadow:inset 0 -1em 0 var(--acid); }
+  nav a { box-shadow:none; }
+  nav a:hover { box-shadow:none; color:var(--acid); }
+  h1,h2,h3 { margin:0; font-weight:900; letter-spacing:-0.035em; }
+  p, li { margin:0; font-size:16px; line-height:1.6; color:var(--body); }
+  ol, ul { margin:0; padding-left:1.3em; display:flex; flex-direction:column; gap:12px; }
+  section { border-top:1px solid var(--rule); padding:64px 0; display:flex; flex-direction:column; gap:26px; }
+  .num { font-family:'JetBrains Mono', monospace; font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--dim); }
+  .dlrow { display:flex; gap:14px; flex-wrap:wrap; }
+  .dl, .copybtn { font-family:'JetBrains Mono', monospace; font-size:10.5px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; background:var(--black); color:var(--stock); padding:12px 16px; box-shadow:none; border:2px solid var(--black); cursor:pointer; display:inline-flex; align-items:center; gap:9px; }
+  .dl:hover, .copybtn:hover { box-shadow:none; background:var(--stock); color:var(--black); }
+  .dl.quiet, .copybtn.quiet { background:var(--stock); color:var(--black); }
+  .dl.quiet:hover, .copybtn.quiet:hover { background:var(--black); color:var(--stock); }
+  .dl .sq, .copybtn .sq { width:8px; height:8px; background:var(--acid); border:1.5px solid currentColor; flex-shrink:0; }
+  /* the page preview, set like the printed page */
+  .pagecard { background:#fff; border:1px solid var(--rule); max-width:460px; margin:0 auto; padding:56px 44px; display:flex; flex-direction:column; gap:20px; text-align:center; box-shadow:0 1px 0 var(--rule); }
+  .pagecard .pk { font-family:'JetBrains Mono', monospace; font-size:9.5px; letter-spacing:0.3em; color:var(--dim); }
+  .pagecard h3 { font-size:26px; letter-spacing:-0.03em; }
+  .pagecard .prule { width:56px; height:2px; background:var(--black); margin:0 auto; }
+  .pagecard p { font-size:13.5px; line-height:1.65; }
+  .pagecard .promise { font-size:17px; font-weight:900; letter-spacing:-0.02em; color:var(--black); }
+  .pagecard .pcap { font-family:'JetBrains Mono', monospace; font-size:8.5px; letter-spacing:0.24em; text-transform:uppercase; color:var(--dim); }
+  .pagecard .tag { font-weight:700; font-size:13.5px; color:var(--black); }
+  .pagecard img { width:104px; height:104px; margin:4px auto 0; image-rendering:pixelated; }
+  .pagecard .scan { font-family:'JetBrains Mono', monospace; font-size:9px; letter-spacing:0.14em; text-transform:uppercase; color:var(--dim); }
+  .pagecard .url { font-family:'JetBrains Mono', monospace; font-size:11.5px; font-weight:700; letter-spacing:0.06em; }
+  @media (max-width:720px) { .wrap { padding:0 24px; } h1 { font-size:44px !important; } .pagecard { padding:40px 24px; } }
+</style>
+</head>
+<body>
+
+<header style="background:var(--black); color:var(--stock);">
+  <div class="wrap" style="max-width:1120px; padding-top:26px; padding-bottom:26px; display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap;">
+    <a href="index.html" style="box-shadow:none; color:var(--stock); font-size:22px; font-weight:900; letter-spacing:-0.04em;">NEO<span style="background:var(--acid); color:var(--black); padding:0 3px;">PULP</span></a>
+    <nav class="mono" style="display:flex; gap:26px; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase;">
+      <a href="index.html" style="color:var(--stock);">Home</a>
+      <a href="books.html" style="color:var(--stock);">Books</a>
+      <a href="rules.html" style="color:var(--stock);">Mark rules</a>
+      <a href="index.html#assets" style="color:var(--acid);">Download assets</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap" style="padding-top:88px; padding-bottom:48px; display:flex; flex-direction:column; gap:26px;">
+  <div class="num">The reader page</div>
+  <h1 style="font-size:62px; line-height:0.94;">Tell the reader what they're holding</h1>
+  <p style="font-size:20px; line-height:1.5; color:var(--body);">A ready-made page for your back matter. It says what a neopulp is, makes the promise, and carries a code that brings the reader here. Copy the text into your manuscript or drop in the print-ready PDF — either way, keep the wording exactly as it is, so the page means the same thing in every book that carries the mark.</p>
+</div>
+
+<div class="wrap">
+
+  <section>
+    <div class="num">01 · The page</div>
+    <h2 style="font-size:30px;">What it says</h2>
+    <div class="pagecard">
+      <div class="pk">A NOTE TO THE READER</div>
+      <h3>This book is a neopulp.</h3>
+      <div class="prule"></div>
+      <p>Its premise, structure and ending belong to a person. Its sentences were written by a machine at that person's instruction. The idea is the authorship — it always was.</p>
+      <p>For most of history, ideas died in the gap between imagining a book and having the ten thousand hours to write it. That gap just closed. What's left was always the human part and always the hard part: the idea, the taste, the direction, the nerve to follow one vision all the way to the end.</p>
+      <p>A book isn't good because a human wrote every word, and it isn't bad because a machine wrote any of them. A book is good or it isn't. You will decide.</p>
+      <div class="promise">A human vision, perfected.</div>
+      <div class="pcap">The promise every neopulp makes</div>
+      <div class="tag">The imagination is free. Come see what it makes.</div>
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASgAAAEoCAIAAABkZftOAAAFe0lEQVR4nO3dsY4kNRRAUQYRAv//nbB5ERAbZMlvr2v6nHhUXV3TVw6eXP56nucX4Of6tb4B+ETCg4DwICA8CAgPAsKDgPAgIDwICA8CwoOA8CAgPAgIDwLCg4DwICA8CAgPAsKDgPAgIDwICA8CwoOA8CAgPAgIDwLCg4DwICA8CAgPAsKDgPAg8Nv0B/z5x+/TH3HEX3//GL3+W57Dyur5rL7X7t/fZvr3YMWDgPAgIDwICA8CwoOA8CAgPAiMz/FWpuckK6fmSLvzq1Pfd/f+p+dvp77X238Pu6x4EBAeBIQHAeFBQHgQEB4EhAeBbI63cmquUs3NqjnbqfuZntftuu33cIoVDwLCg4DwICA8CAgPAsKDgPAgcN0c7zZvmZtNX+e2+d7bWfEgIDwICA8CwoOA8CAgPAgIDwLmeP9jen/d7ueeem+nuVzLigcB4UFAeBAQHgSEBwHhQUB4ELhujmeO9K/b5nLV3O+7/h6seBAQHgSEBwHhQUB4EBAeBIQHgWyOd+rcs8qpc+2m9+nd9vcrb/897LLiQUB4EBAeBIQHAeFBQHgQEB4Evp7nqe/hlar52LTb9gF+V1Y8CAgPAsKDgPAgIDwICA8CwoPAdfvxpudI1Tzt7fvfbnvO089nmhUPAsKDgPAgIDwICA8CwoOA8CDwbffj3TYf+7Q54cr09z31udNzPyseBIQHAeFBQHgQEB4EhAcB4UEg24+38l3nWredI1fN66bPCVy57f2lVjwICA8CwoOA8CAgPAgIDwLCg8D4HK+at7zlPZC7bntf6PQc7Lbve4oVDwLCg4DwICA8CAgPAsKDgPAgcN1+vFOqeeCp69z2Hsjb7mf3+rfN96x4EBAeBIQHAeFBQHgQEB4EhAeB7Hy86j2T1Tl1K2+f7+2q9klW5wGuWPEgIDwICA8CwoOA8CAgPAgIDwLjc7xqTrJSzf1u+77V/r3qXMHq+itWPAgIDwLCg4DwICA8CAgPAsKDwPh7Nd+yz2r199P75ar9eLeda3fqOre9P3PFigcB4UFAeBAQHgSEBwHhQUB4EMj24+2aft/mKdPvb7ztOtX1386KBwHhQUB4EBAeBIQHAeFBQHgQuO69mtX7Kqu51q7q/L3bnsMu5+MBwoOC8CAgPAgIDwLCg4DwIJC9V/PU369U86Lb3sO5e51du/fz9v/vKVY8CAgPAsKDgPAgIDwICA8CwoPA+H68U6p9etOq/XK3Pc9qv2LFigcB4UFAeBAQHgSEBwHhQUB4EBjfj3fbvqlT86vpuVM133v7OYQrt80trXgQEB4EhAcB4UFAeBAQHgSEB4Hr3qs57bbz5d4+51yp3p952/NcseJBQHgQEB4EhAcB4UFAeBAQHgQ+bj/eyu55btPzuuk5WDVXPLVvcOUt+wmteBAQHgSEBwHhQUB4EBAeBIQHgfHz8abnNrum7+e2uVml2o83/d7RU6x4EBAeBIQHAeFBQHgQEB4EhAeB8f14u97+Xsdd1f696Xlj9dx2VfM9Kx4EhAcB4UFAeBAQHgSEBwHhQeC6Od5tpvfR3bZPrLqfah+j/XjwQYQHAeFBQHgQEB4EhAcB4UHAHO+wat61ctu+xN1zCKfZjwcfRHgQEB4EhAcB4UFAeBAQHgSum+NV85wV+9P+26nnc+o6bzmH0IoHAeFBQHgQEB4EhAcB4UFAeBDI5ni3zVVWTs2jpj935e3P+S3n7O2y4kFAeBAQHgSEBwHhQUB4EBAeBL6e56nvAT6OFQ8CwoOA8CAgPAgIDwLCg4DwICA8CAgPAsKDgPAgIDwICA8CwoOA8CAgPAgIDwLCg4DwICA8CAgPAsKDgPAgIDwICA8CwoOA8CAgPAgIDwLCg4DwIPAP/VxDqZSeQUsAAAAASUVORK5CYII=" alt="QR code linking to neopulp.possibility.com" width="104" height="104" />
+      <div class="scan">Scan the code, or go to</div>
+      <div class="url">neopulp.possibility.com</div>
+    </div>
+    <p style="text-align:center; font-size:14px; color:var(--dim);">Set it in your book's own interior face — the wording is fixed, the type is yours.</p>
+  </section>
+
+  <section>
+    <div class="num">02 · Take the text</div>
+    <h2 style="font-size:30px;">Copy it, or download it</h2>
+    <p>The copied text carries a placeholder line marking where the QR code sits. Last page of back matter is the natural home; facing the title page also works.</p>
+    <div class="dlrow">
+      <button class="copybtn" id="copy-plain" type="button"><span class="sq"></span>Copy plain text</button>
+      <button class="copybtn quiet" id="copy-md" type="button">Copy markdown</button>
+      <a class="dl quiet" href="assets/neopulp-reader-page.txt" download>.txt ↓</a>
+      <a class="dl quiet" href="assets/neopulp-reader-page.md" download>.md ↓</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="num">03 · Take the code</div>
+    <h2 style="font-size:30px;">The QR code</h2>
+    <p>It points here. Generated with high error correction, so it scans reliably off matte paperback stock. Print it at least 20mm square, press black on stock, clear space on all sides — and always keep the URL printed beneath it, because some readers won't scan.</p>
+    <div class="dlrow">
+      <a class="dl" href="assets/neopulp-qr.svg" download><span class="sq"></span>QR — SVG ↓</a>
+      <a class="dl quiet" href="assets/png/neopulp-qr.png" download>QR — PNG 4× ↓</a>
+    </div>
+  </section>
+
+  <section style="border-bottom:1px solid var(--rule);">
+    <div class="num">04 · Or take the whole page</div>
+    <h2 style="font-size:30px;">Print-ready PDF</h2>
+    <p>The full page, set in Archivo and JetBrains Mono at 6&Prime;&nbsp;×&nbsp;9&Prime; trim, one ink. Drop it straight into a standard trade paperback interior; for other trim sizes, copy the text instead and set it yourself.</p>
+    <div class="dlrow">
+      <a class="dl" href="assets/neopulp-reader-page.pdf" download><span class="sq"></span>Reader page — PDF ↓</a>
+    </div>
+    <p style="font-size:14px; color:var(--dim);">Goes with the mark, not instead of it: the stamp and credit line still belong on the cover and title page. <a href="rules.html">Mark rules →</a></p>
+  </section>
+
+</div>
+
+<footer style="background:var(--acid); color:var(--black); margin-top:0;">
+  <div class="wrap" style="max-width:1120px; padding-top:64px; padding-bottom:64px; display:flex; justify-content:space-between; align-items:flex-end; gap:32px; flex-wrap:wrap;">
+    <div style="font-size:40px; font-weight:900; letter-spacing:-0.04em; line-height:1; max-width:20ch;">Every reader is a new pair of eyes on the format.</div>
+    <div class="mono" style="font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase;"><a href="index.html" style="box-shadow:inset 0 -0.4em 0 rgba(13,12,11,0.13);">← Back to neopulp</a></div>
+  </div>
+</footer>
+
+<script>
+/* The only script on the site: two copy buttons. Everything works without it —
+   the .txt and .md downloads carry the same text. */
+(function () {
+  var plain = "A NOTE TO THE READER\n\nTHIS BOOK IS A NEOPULP.\n\nIts premise, structure and ending belong to a person. Its sentences were written by a machine at that person's instruction. The idea is the authorship — it always was.\n\nFor most of history, ideas died in the gap between imagining a book and having the ten thousand hours to write it. That gap just closed. What's left was always the human part and always the hard part: the idea, the taste, the direction, the nerve to follow one vision all the way to the end.\n\nA book isn't good because a human wrote every word, and it isn't bad because a machine wrote any of them. A book is good or it isn't. You will decide.\n\nA human vision, perfected.\n— the promise every neopulp makes\n\nThe imagination is free. Come see what it makes.\n\n[Place the neopulp QR code here — assets at neopulp.possibility.com]\n\nScan the code, or go to\nneopulp.possibility.com\n";
+  var md = "*A NOTE TO THE READER*\n\n# This book is a neopulp.\n\nIts premise, structure and ending belong to a person. Its sentences were written by a machine at that person's instruction. The idea is the authorship — it always was.\n\nFor most of history, ideas died in the gap between imagining a book and having the ten thousand hours to write it. That gap just closed. What's left was always the human part and always the hard part: the idea, the taste, the direction, the nerve to follow one vision all the way to the end.\n\nA book isn't good because a human wrote every word, and it isn't bad because a machine wrote any of them. A book is good or it isn't. You will decide.\n\n**A human vision, perfected.**\n*— the promise every neopulp makes*\n\n*The imagination is free. Come see what it makes.*\n\n![neopulp QR code](neopulp-qr.svg)\n\nScan the code, or go to\n**neopulp.possibility.com**\n";
+  function wire(id, text, label) {
+    var b = document.getElementById(id);
+    b.addEventListener('click', function () {
+      function ok() { var was = b.innerHTML; b.innerHTML = 'COPIED'; setTimeout(function () { b.innerHTML = was; }, 1400); }
+      if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(text).then(ok, function () { fb(text); ok(); }); }
+      else { fb(text); ok(); }
+    });
+  }
+  function fb(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+  wire('copy-plain', plain);
+  wire('copy-md', md);
+})();
+</script>
+
+</body>
+</html>

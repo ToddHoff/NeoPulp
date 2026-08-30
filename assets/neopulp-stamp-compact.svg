@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" width="320" height="120" role="img" aria-label="Neopulp format mark">
+  <title>Neopulp format stamp — compact, promise dropped. Use 22–34mm wide.</title>
+  <rect x="3" y="3" width="314" height="114" fill="none" stroke="#0D0C0B" stroke-width="6"></rect>
+  <text x="21" y="48" font-family="Archivo, &#39;Archivo Black&#39;, Helvetica, Arial, sans-serif" font-weight="900" font-size="30" letter-spacing="-0.6" fill="#0D0C0B" textLength="158" lengthAdjust="spacingAndGlyphs">NEOPULP</text>
+  <rect x="277" y="27" width="20" height="20" fill="#E8FF4D" stroke="#0D0C0B" stroke-width="3"></rect>
+  <rect x="21" y="62" width="278" height="3" fill="#0D0C0B"></rect>
+  <text x="21" y="86" font-family="&#39;JetBrains Mono&#39;, ui-monospace, monospace" font-size="9.5" letter-spacing="1" fill="#4A463F">HUMAN IDEA · MACHINE PROSE</text>
+  <text x="21" y="100" font-family="&#39;JetBrains Mono&#39;, ui-monospace, monospace" font-size="9.5" letter-spacing="1" fill="#4A463F">FORMAT MARK · EST. 2026</text>
+</svg>
