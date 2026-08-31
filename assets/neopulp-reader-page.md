@@ -2,7 +2,7 @@
 
 # This book is a neopulp.
 
-Its premise, structure and ending belong to a person. Its sentences were written by a machine at that person's instruction. The idea is the authorship — it always was.
+A neopulp is a book whose premise, structure and ending belong to a person, and whose sentences were written by a machine at that person's instruction. The idea is the authorship. It always was.
 
 For all of history, most creativity died in the gap between conceiving a thing and being able to make it. The vision was there; the ten thousand hours were not. Having the idea and writing it down were one job, so books belonged to the people with the hours, not the people with the ideas. That gap just closed. The machine frees the imagination from the work of execution. What's left was always the human part and always the hard part: the idea, the taste, the direction, the nerve to follow one vision all the way to the end. This is not the death of creativity. It's the release of it.
 
