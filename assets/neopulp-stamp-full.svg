@@ -4,8 +4,8 @@
   <text x="21" y="48" font-family="Archivo, &#39;Archivo Black&#39;, Helvetica, Arial, sans-serif" font-weight="900" font-size="30" letter-spacing="-0.6" fill="#0D0C0B" textLength="158" lengthAdjust="spacingAndGlyphs">NEOPULP</text>
   <rect x="277" y="27" width="20" height="20" fill="#E8FF4D" stroke="#0D0C0B" stroke-width="3"></rect>
   <rect x="21" y="62" width="278" height="3" fill="#0D0C0B"></rect>
-  <text x="21" y="90" font-family="Archivo, Helvetica, Arial, sans-serif" font-weight="700" font-size="16" letter-spacing="-0.3" fill="#0D0C0B">One big premise,</text>
-  <text x="21" y="109" font-family="Archivo, Helvetica, Arial, sans-serif" font-weight="700" font-size="16" letter-spacing="-0.3" fill="#0D0C0B">followed all the way.</text>
-  <text x="21" y="136" font-family="&#39;JetBrains Mono&#39;, ui-monospace, monospace" font-size="9.5" letter-spacing="1" fill="#4A463F">HUMAN IDEA · MACHINE PROSE</text>
+  <text x="21" y="90" font-family="Archivo, Helvetica, Arial, sans-serif" font-weight="700" font-size="16" letter-spacing="-0.3" fill="#0D0C0B">A human vision,</text>
+  <text x="21" y="109" font-family="Archivo, Helvetica, Arial, sans-serif" font-weight="700" font-size="16" letter-spacing="-0.3" fill="#0D0C0B">perfected.</text>
+  <text x="21" y="136" font-family="&#39;JetBrains Mono&#39;, ui-monospace, monospace" font-size="9" letter-spacing="1" fill="#4A463F" textLength="278" lengthAdjust="spacing">WRITTEN WITH A MACHINE · DRAFT AFTER DRAFT</text>
   <text x="21" y="150" font-family="&#39;JetBrains Mono&#39;, ui-monospace, monospace" font-size="9.5" letter-spacing="1" fill="#4A463F">FORMAT MARK · EST. 2026</text>
 </svg>

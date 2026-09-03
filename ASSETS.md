@@ -50,12 +50,12 @@ Two inks plus stock. No third colour, no tints, no gradients, no glow.
 
 > Seeded by [name]
 >
-> The premise, structure and direction of this book are hers.
-> The sentences were written by a machine at her instruction.
+> Summoned, shaped and judged by the author.
+> Written with a machine, draft after draft.
 
 **Shelf / search language:** idea-first fiction.
 
-**Never:** "AI-assisted", "co-created", "in collaboration with", "AI-generated", or any sentence beginning "While some may…".
+**Never:** "AI-assisted", "AI-generated", or any sentence beginning "While some may…". Calling the machine a collaborator is not a hedge — it's how the book was made.
 
 ## Series numbering
 
