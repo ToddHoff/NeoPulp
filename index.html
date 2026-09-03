@@ -50,6 +50,7 @@
     .wrap { padding:0 24px; }
     .grid3, .assetgrid, .hairgrid { grid-template-columns:1fr 1fr !important; }
     h1 { font-size:52px !important; }
+    footer .wrap { grid-template-columns:1fr !important; }
   }
   @media (max-width:620px) {
     .grid3, .assetgrid, .hairgrid { grid-template-columns:1fr !important; }
@@ -431,12 +432,19 @@
 </section>
 
 <footer style="background:var(--acid); color:var(--black);">
-  <div class="wrap" style="padding-top:76px; padding-bottom:76px; display:flex; justify-content:space-between; align-items:flex-end; gap:40px; flex-wrap:wrap;">
-    <div style="font-size:52px; font-weight:900; letter-spacing:-0.04em; line-height:0.98; max-width:22ch;">The imagination is free. Come see what it makes.</div>
-    <div class="mono" style="display:flex; flex-direction:column; gap:8px; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase;">
-      <div>Neopulp · idea-first fiction</div>
-      <div>A movement, not a publisher</div>
-      <div><a href="rules.html" style="box-shadow:inset 0 -0.4em 0 rgba(13,12,11,0.13);">Mark rules &amp; specification →</a></div>
+  <div class="wrap" style="padding-top:72px; padding-bottom:64px; display:grid; grid-template-columns:1.3fr 1fr; gap:56px; align-items:end;">
+    <div style="display:flex; flex-direction:column; gap:28px;">
+      <div style="font-size:44px; font-weight:900; letter-spacing:-0.04em; line-height:1; max-width:16ch; text-wrap:balance;">The imagination is free. Come see what it makes.</div>
+      <div class="mono" style="font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase;"><a href="books.html" style="box-shadow:inset 0 -0.4em 0 rgba(13,12,11,0.13);">Made one? Put it on the shelf →</a></div>
+    </div>
+    <div class="mono" style="display:grid; grid-template-columns:1fr 1fr; gap:10px 24px; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase;">
+      <a href="#why" style="box-shadow:none;">The manifesto</a>
+      <a href="books.html" style="box-shadow:none;">Books</a>
+      <a href="#how" style="box-shadow:none;">How to mark a book</a>
+      <a href="book-page.html" style="box-shadow:none;">Reader page</a>
+      <a href="#assets" style="box-shadow:none;">Assets</a>
+      <a href="rules.html" style="box-shadow:none;">Mark rules</a>
+      <div style="grid-column:1 / -1; border-top:1px solid rgba(13,12,11,0.2); padding-top:14px; margin-top:8px; color:rgba(13,12,11,0.7);">Neopulp · idea-first fiction · a movement, not a publisher</div>
     </div>
   </div>
 </footer>
