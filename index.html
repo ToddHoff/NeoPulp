@@ -23,6 +23,7 @@
   a:hover { box-shadow:inset 0 -1em 0 var(--acid); }
   nav a, .navlink { box-shadow:none; }
   nav a:hover { box-shadow:none; color:var(--acid); }
+  nav { flex-wrap:wrap; row-gap:10px; }
   h1, h2, h3 { margin:0; font-weight:900; letter-spacing:-0.04em; }
   p { margin:0; }
   .dark { background:var(--black); color:var(--stock); }
@@ -51,6 +52,9 @@
     .grid3, .assetgrid, .hairgrid { grid-template-columns:1fr 1fr !important; }
     h1 { font-size:52px !important; }
     footer .wrap { grid-template-columns:1fr !important; }
+    [style*="grid-template-columns:1.1fr 1fr"], [style*="grid-template-columns:1fr 1fr;"], [style*="grid-template-columns:auto 1fr"], [style*="grid-template-columns:1.3fr 1fr"] { grid-template-columns:1fr !important; }
+    [style*="font-size:56px"] { font-size:40px !important; }
+    [style*="font-size:52px"] { font-size:40px !important; }
   }
   @media (max-width:620px) {
     .grid3, .assetgrid, .hairgrid { grid-template-columns:1fr !important; }
@@ -84,8 +88,19 @@
       <div style="display:flex; flex-direction:column; gap:20px;">
         <div style="font-size:30px; font-weight:900; letter-spacing:-0.03em; line-height:1.15; border-left:6px solid var(--acid); padding-left:20px;">A human vision, perfected.</div>
         <div class="mono" style="font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--dimdark); padding-left:26px;">The promise every neopulp makes</div>
+        <div class="mono" style="font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; padding-left:26px; margin-top:12px;"><a href="#how" style="color:var(--acid); box-shadow:inset 0 -0.4em 0 #3a3733;">Just want to mark a book? Skip to the steps ↓</a></div>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="readers" style="background:#e5e2d9; border-bottom:1px solid var(--rule);">
+  <div class="wrap" style="padding-top:44px; padding-bottom:44px; display:grid; grid-template-columns:auto 1fr; gap:48px; align-items:center;">
+    <div style="display:flex; flex-direction:column; gap:8px;">
+      <div class="mono" style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--dim);">For readers</div>
+      <div style="font-size:26px; font-weight:900; letter-spacing:-0.03em; line-height:1.1; max-width:14ch;">Saw the mark on a book?</div>
+    </div>
+    <p style="font-size:16.5px; line-height:1.6; color:var(--body); max-width:70ch; text-wrap:pretty;">It means three things. A person created this book, shaped it and judged it, and stands behind every word. A machine wrote the sentences, with them, over many drafts. And the book is good or it isn't — that part is yours to decide. The mark tells you how it was made, not whether to like it.</p>
   </div>
 </section>
 
@@ -198,6 +213,7 @@
     <div style="display:flex; flex-direction:column; gap:18px; font-size:16.5px; line-height:1.65; color:var(--body);">
       <p>The book is argued into existence — you push, it pushes further, you cut, it comes back better — and you don't sign until every word is one you'd stand behind. If it pads, drifts, or gives up halfway, the mark is a lie and readers will price it in.</p>
       <p>That's the whole test. Not that a human typed it; that a human created it, shaped it, judged it, and stands behind it.</p>
+      <p style="border-top:1px solid var(--rule); padding-top:18px;"><strong>Where the line is.</strong> If a machine wrote the sentences, it's a neopulp — mark it. If you wrote the sentences and used a machine to edit, research, or brainstorm, it isn't. That's just writing, and it needs no mark.</p>
     </div>
   </div>
 </section>
@@ -234,6 +250,7 @@
           </div>
         </div>
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px; font-size:15.5px; line-height:1.6; color:var(--bodydark);">
+          <p><span class="mono" style="color:var(--acid); font-size:11px; letter-spacing:0.14em; display:block; margin-bottom:8px;">“SEEDED BY” IS YOUR BYLINE</span>It replaces “by” on the title page — it says the same thing “by” does, and one thing more. Your name on the cover stays as it is. In an ebook, the title page is the first page of the file; the credit goes there, same size as the title's byline would be.</p>
           <p><span class="mono" style="color:var(--acid); font-size:11px; letter-spacing:0.14em; display:block; margin-bottom:8px;">WHY IT'S FIRST</span>A disclosure at the back reads as something you were caught at. At byline scale on the title page it reads as what it is — a claim of responsibility for what was created.</p>
           <p><span class="mono" style="color:var(--acid); font-size:11px; letter-spacing:0.14em; display:block; margin-bottom:8px;">WORDS TO AVOID</span>“AI-assisted”, “AI-generated”, and anything that begins “While some may…”. Say how it was made, plainly. Hedging is the only thing that actually looks like shame.</p>
         </div>
@@ -248,7 +265,7 @@
     <div class="mono" style="font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--dim);">Any size, any corner · use the files as supplied</div>
   </div>
 
-  <p style="font-size:17px; line-height:1.6; color:var(--body); max-width:70ch;">Pick the stamp size that fits your cover and place it. Don't redraw it: the keyline and wordmark may take your cover's text colour; the acid square never changes and the stamp never rotates. <a href="rules.html">Full rules →</a></p>
+  <p style="font-size:17px; line-height:1.6; color:var(--body); max-width:70ch;">Pick the stamp size that fits your cover and place it. Don't redraw it: the keyline and wordmark may take your cover's text colour; the acid square never changes and the stamp never rotates. For an ebook, put it on the cover image the same way — at least 96px wide at the image's full size, or the badge below that. <a href="rules.html">Full rules →</a></p>
 
   <div style="display:flex; gap:32px; flex-wrap:wrap; align-items:flex-start; border-top:1px solid var(--rule); padding-top:48px;">
     <div style="display:flex; flex-direction:column; gap:14px;">
@@ -417,7 +434,7 @@
     <div style="display:flex; flex-direction:column; gap:18px; font-size:16.5px; line-height:1.65; color:var(--body);">
       <p>The reader page is a single page, headed “A note to the reader,” that tells whoever is holding your book what a neopulp is, what the mark on the cover means, and where to find out more. Put it on the last page of your back matter. Facing the title page also works.</p>
       <p>Two ways to add it. Copy the text into your manuscript and set it in your book's own interior face — the wording stays exactly as written, so the page means the same thing in every neopulp. Or, if your book is a standard 6&Prime;&nbsp;×&nbsp;9&Prime; trade paperback, drop in the print-ready PDF as is.</p>
-      <p>Either way, print the QR code with the URL beneath it, so readers who don't scan can still find their way here.</p>
+      <p>Either way, print the QR code with the URL beneath it, so readers who don't scan can still find their way here. In an ebook, make it the last page of the file and link the URL.</p>
     </div>
     <div style="display:flex; flex-direction:column; gap:14px;">
       <div class="mono" style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--dim);">Take it</div>
@@ -436,7 +453,7 @@
   <div class="wrap" style="padding-top:72px; padding-bottom:64px; display:grid; grid-template-columns:1.3fr 1fr; gap:56px; align-items:end;">
     <div style="display:flex; flex-direction:column; gap:28px;">
       <div style="font-size:44px; font-weight:900; letter-spacing:-0.04em; line-height:1; max-width:16ch; text-wrap:balance;">The imagination is free. Come see what it makes.</div>
-      <div class="mono" style="font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase;"><a href="books.html" style="box-shadow:inset 0 -0.4em 0 rgba(13,12,11,0.13);">Made one? Put it on the shelf →</a></div>
+      <div class="mono" style="font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase;"><a href="mailto:toddhoffious@gmail.com?subject=A%20neopulp%20for%20the%20shelf" style="box-shadow:inset 0 -0.4em 0 rgba(13,12,11,0.13);">Made one? Email it to the shelf →</a></div>
     </div>
     <div class="mono" style="display:grid; grid-template-columns:1fr 1fr; gap:10px 24px; font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase;">
       <a href="#why" style="box-shadow:none;">The manifesto</a>
@@ -445,7 +462,7 @@
       <a href="book-page.html" style="box-shadow:none;">Reader page</a>
       <a href="#assets" style="box-shadow:none;">Assets</a>
       <a href="rules.html" style="box-shadow:none;">Mark rules</a>
-      <div style="grid-column:1 / -1; border-top:1px solid rgba(13,12,11,0.2); padding-top:14px; margin-top:8px; color:rgba(13,12,11,0.7);">Neopulp · idea-first fiction · a movement, not a publisher</div>
+      <div style="grid-column:1 / -1; border-top:1px solid rgba(13,12,11,0.2); padding-top:14px; margin-top:8px; color:rgba(13,12,11,0.7);">Neopulp · idea-first fiction · a movement, not a publisher<br />Started by Todd Hoff, 2026</div>
     </div>
   </div>
 </footer>
