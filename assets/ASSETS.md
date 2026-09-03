@@ -51,7 +51,7 @@ Two inks plus stock. No third colour, no tints, no gradients, no glow.
 > Seeded by [name]
 >
 > Created, shaped and judged by the author.
-> Written with a machine, draft after draft.
+> Written with a machine.
 
 **Shelf / search language:** idea-first fiction.
 
