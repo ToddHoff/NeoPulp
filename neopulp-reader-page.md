@@ -13,7 +13,7 @@ A book isn't good because a human wrote every word, and it isn't bad because a m
 **A human vision, perfected.**
 *— the promise every neopulp makes*
 
-*We create. We don't stop. Come find the close-up.*
+*We create. We don't stop. Come make something.*
 
 ![neopulp QR code](neopulp-qr.svg)
 
