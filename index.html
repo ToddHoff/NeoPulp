@@ -36,14 +36,23 @@
   .sq { width:9px; height:9px; background:var(--acid); border:1.5px solid currentColor; flex-shrink:0; }
   /* asset tiles */
   .assetgrid { display:grid; grid-template-columns:repeat(4,1fr); gap:2px; background:#2a2724; border:1px solid #2a2724; }
-  .tile { background:var(--stock); padding:24px 22px; display:flex; flex-direction:column; gap:18px; justify-content:space-between; min-height:230px; box-shadow:none; position:relative; transition:background 120ms; }
-  .tile:hover { background:#fff; box-shadow:none; }
+  .tile { color:var(--black); background:var(--stock); padding:24px 22px; display:flex; flex-direction:column; gap:18px; justify-content:space-between; min-height:230px; position:relative; transition:background 120ms; }
+  .tile:hover { background:#fff; }
+  .tile a { box-shadow:none; }
+  .tile a:hover { box-shadow:none; }
+  .tileimg { display:block; }
   .tile img { width:100%; height:auto; }
   .tile .name { font-family:'JetBrains Mono', monospace; font-size:10px; letter-spacing:0.06em; font-weight:700; }
   .tile .desc { font-size:13.5px; line-height:1.5; color:#4a463f; }
-  .dl { font-family:'JetBrains Mono', monospace; font-size:9.5px; letter-spacing:0.12em; text-transform:uppercase; display:flex; gap:10px; align-items:center; }
-  .dl span { background:var(--acid); color:var(--black); padding:3px 6px; }
-  .tile.on-dark { background:#161412; }
+  .dl { font-family:'JetBrains Mono', monospace; font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; font-weight:700; display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+  .dl a { padding:5px 9px; border:1.5px solid; transition:background 120ms, color 120ms, border-color 120ms; }
+  .dl a.svg { background:var(--acid); border-color:var(--acid); color:var(--black); }
+  .dl a.svg:hover { background:var(--black); border-color:var(--black); color:var(--acid); }
+  .dl a.png { background:var(--black); border-color:var(--black); color:var(--acid); }
+  .dl a.png:hover { background:var(--acid); border-color:var(--acid); color:var(--black); }
+  .tile.on-dark .dl a.png { background:var(--stock); border-color:var(--stock); color:var(--black); }
+  .tile.on-dark .dl a.png:hover { background:var(--acid); border-color:var(--acid); color:var(--black); }
+  .tile.on-dark { background:#161412; color:var(--stock); }
   .tile.on-dark:hover { background:#1e1b18; }
   .tile.on-dark .name { color:var(--stock); }
   .tile.on-dark .desc { color:var(--bodydark); }
@@ -331,7 +340,7 @@
     <div style="display:flex; justify-content:space-between; align-items:flex-end; gap:32px; flex-wrap:wrap; border-bottom:8px solid var(--acid); padding-bottom:26px;">
       <div style="display:flex; flex-direction:column; gap:14px;">
         <h2 style="font-size:46px;"><span style="color:var(--acid);">Step 03</span> · Take the files</h2>
-        <p style="font-size:17px; line-height:1.55; color:var(--bodydark); max-width:58ch;">Eight SVGs and matching 4× PNGs. Free to use on any book that keeps the promise and prints the credit — no permission, no registration, no fee. Click any tile to download the SVG; the PNG link sits beneath it.</p>
+        <p style="font-size:17px; line-height:1.55; color:var(--bodydark); max-width:58ch;">Eight SVGs and matching 4× PNGs. Free to use on any book that keeps the promise and prints the credit — no permission, no registration, no fee. Every mark comes both ways: hit <strong>SVG</strong> for anything printed or resized, or <strong>PNG</strong> if your tool prefers pixels &mdash; most storefronts, slide decks and design tools do.</p>
       </div>
       <div class="mono" style="font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase;"><a href="rules.html" style="color:var(--acid); box-shadow:inset 0 -0.4em 0 #3a3733;">Read the rules →</a></div>
     </div>
@@ -339,72 +348,88 @@
     <div>
       <div class="mono" style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--dimdark); margin-bottom:14px;">Which file, and when</div>
       <div class="assetgrid">
-        <a class="tile" href="assets/neopulp-stamp-full.svg" download>
+        <div class="tile">
+          <a class="tileimg" href="assets/neopulp-stamp-full.svg" download>
           <img src="assets/neopulp-stamp-full.svg" alt="Neopulp full stamp" />
+          </a>
           <div style="display:flex; flex-direction:column; gap:8px;">
             <div class="name">STAMP-FULL</div>
             <div class="desc">Back covers, title pages, print at 34mm and up. The only version that carries the promise.</div>
-            <div class="dl"><span>SVG ↓</span><a href="assets/png/neopulp-stamp-full.png" download style="box-shadow:none; color:var(--dim);">PNG 4×</a></div>
+            <div class="dl"><a class="svg" href="assets/neopulp-stamp-full.svg" download>SVG ↓</a><a class="png" href="assets/png/neopulp-stamp-full.png" download>PNG 4&times;</a></div>
           </div>
-        </a>
-        <a class="tile" href="assets/neopulp-stamp-compact.svg" download>
+        </div>
+        <div class="tile">
+          <a class="tileimg" href="assets/neopulp-stamp-compact.svg" download>
           <img src="assets/neopulp-stamp-compact.svg" alt="Neopulp compact stamp" />
+          </a>
           <div style="display:flex; flex-direction:column; gap:8px;">
             <div class="name">STAMP-COMPACT</div>
             <div class="desc">22–34mm. Front covers with room to spare. Promise drops, disclosure stays.</div>
-            <div class="dl"><span>SVG ↓</span><a href="assets/png/neopulp-stamp-compact.png" download style="box-shadow:none; color:var(--dim);">PNG 4×</a></div>
+            <div class="dl"><a class="svg" href="assets/neopulp-stamp-compact.svg" download>SVG ↓</a><a class="png" href="assets/png/neopulp-stamp-compact.png" download>PNG 4&times;</a></div>
           </div>
-        </a>
-        <a class="tile" href="assets/neopulp-stamp-badge.svg" download>
+        </div>
+        <div class="tile">
+          <a class="tileimg" href="assets/neopulp-stamp-badge.svg" download>
           <img src="assets/neopulp-stamp-badge.svg" alt="Neopulp badge" />
+          </a>
           <div style="display:flex; flex-direction:column; gap:8px;">
             <div class="name">STAMP-BADGE</div>
             <div class="desc">Under 22mm. Spines, thumbnails, busy covers, storefront listings.</div>
-            <div class="dl"><span>SVG ↓</span><a href="assets/png/neopulp-stamp-badge.png" download style="box-shadow:none; color:var(--dim);">PNG 4×</a></div>
+            <div class="dl"><a class="svg" href="assets/neopulp-stamp-badge.svg" download>SVG ↓</a><a class="png" href="assets/png/neopulp-stamp-badge.png" download>PNG 4&times;</a></div>
           </div>
-        </a>
-        <a class="tile" href="assets/neopulp-seal-square.svg" download style="align-items:flex-start;">
+        </div>
+        <div class="tile" style="align-items:flex-start;">
+          <a class="tileimg" href="assets/neopulp-seal-square.svg" download>
           <img src="assets/neopulp-seal-square.svg" alt="Neopulp square seal" style="width:78px; height:78px;" />
+          </a>
           <div style="display:flex; flex-direction:column; gap:8px;">
             <div class="name">SEAL-SQUARE</div>
             <div class="desc">Avatars, favicons, app tiles, die-cut stickers — and covers, where the square fits. It carries no disclosure; the title page does.</div>
-            <div class="dl"><span>SVG ↓</span><a href="assets/png/neopulp-seal-square.png" download style="box-shadow:none; color:var(--dim);">PNG 4×</a></div>
+            <div class="dl"><a class="svg" href="assets/neopulp-seal-square.svg" download>SVG ↓</a><a class="png" href="assets/png/neopulp-seal-square.png" download>PNG 4&times;</a></div>
           </div>
-        </a>
-        <a class="tile" href="assets/neopulp-wordmark-black.svg" download>
+        </div>
+        <div class="tile">
+          <a class="tileimg" href="assets/neopulp-wordmark-black.svg" download>
           <img src="assets/neopulp-wordmark-black.svg" alt="Neopulp wordmark, black" />
+          </a>
           <div style="display:flex; flex-direction:column; gap:8px;">
             <div class="name">WORDMARK-BLACK</div>
             <div class="desc">The word itself, light backgrounds. For writing <strong>about</strong> the format — sites, posters, decks.</div>
-            <div class="dl"><span>SVG ↓</span><a href="assets/png/neopulp-wordmark-black.png" download style="box-shadow:none; color:var(--dim);">PNG 4×</a></div>
+            <div class="dl"><a class="svg" href="assets/neopulp-wordmark-black.svg" download>SVG ↓</a><a class="png" href="assets/png/neopulp-wordmark-black.png" download>PNG 4&times;</a></div>
           </div>
-        </a>
-        <a class="tile on-dark" href="assets/neopulp-wordmark-reversed.svg" download>
+        </div>
+        <div class="tile on-dark">
+          <a class="tileimg" href="assets/neopulp-wordmark-reversed.svg" download>
           <img src="assets/neopulp-wordmark-reversed.svg" alt="Neopulp wordmark, reversed" />
+          </a>
           <div style="display:flex; flex-direction:column; gap:8px;">
             <div class="name">WORDMARK-REVERSED</div>
             <div class="desc">Dark backgrounds. NEO turns white, PULP stays black on acid — that pairing never inverts.</div>
-            <div class="dl"><span>SVG ↓</span><a href="assets/png/neopulp-wordmark-reversed.png" download style="box-shadow:none; color:var(--dimdark);">PNG 4×</a></div>
+            <div class="dl"><a class="svg" href="assets/neopulp-wordmark-reversed.svg" download>SVG ↓</a><a class="png" href="assets/png/neopulp-wordmark-reversed.png" download>PNG 4&times;</a></div>
           </div>
-        </a>
-        <a class="tile" href="assets/neopulp-wordmark-mono.svg" download>
+        </div>
+        <div class="tile">
+          <a class="tileimg" href="assets/neopulp-wordmark-mono.svg" download>
           <img src="assets/neopulp-wordmark-mono.svg" alt="Neopulp wordmark, one ink" />
+          </a>
           <div style="display:flex; flex-direction:column; gap:8px;">
             <div class="name">WORDMARK-MONO</div>
             <div class="desc">One-ink print, foil, emboss, copyright pages. No highlight available at all.</div>
-            <div class="dl"><span>SVG ↓</span><a href="assets/png/neopulp-wordmark-mono.png" download style="box-shadow:none; color:var(--dim);">PNG 4×</a></div>
+            <div class="dl"><a class="svg" href="assets/neopulp-wordmark-mono.svg" download>SVG ↓</a><a class="png" href="assets/png/neopulp-wordmark-mono.png" download>PNG 4&times;</a></div>
           </div>
-        </a>
-        <a class="tile" href="assets/neopulp-stamp-full-reversed.svg" download>
+        </div>
+        <div class="tile">
+          <a class="tileimg" href="assets/neopulp-stamp-full-reversed.svg" download>
           <div style="background:var(--black); padding:16px; display:flex; align-items:center; justify-content:center;">
             <img src="assets/neopulp-stamp-full-reversed.svg" alt="Neopulp full stamp, reversed" />
           </div>
+          </a>
           <div style="display:flex; flex-direction:column; gap:8px;">
             <div class="name">STAMP-FULL-REVERSED</div>
             <div class="desc">The full stamp for dark covers. Same geometry, stock-white keyline.</div>
-            <div class="dl"><span>SVG ↓</span><a href="assets/png/neopulp-stamp-full-reversed.png" download style="box-shadow:none; color:var(--dim);">PNG 4×</a></div>
+            <div class="dl"><a class="svg" href="assets/neopulp-stamp-full-reversed.svg" download>SVG ↓</a><a class="png" href="assets/png/neopulp-stamp-full-reversed.png" download>PNG 4&times;</a></div>
           </div>
-        </a>
+        </div>
       </div>
     </div>
 
