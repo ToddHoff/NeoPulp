@@ -27,22 +27,17 @@ DIM = Color(.43, .42, .38)
 KICKER = "A NOTE TO THE READER"
 TITLE = "This book is a neopulp."
 PARAS = [
-    "A neopulp is a book a person created, shaped and judged — and a machine wrote with them. "
+    "A neopulp is a book a person created, shaped and judged \u2014 and a machine wrote with them. "
     "The author is the one who takes responsibility for it: I created this, I shaped it, I judged it, "
     "and I stand behind it.",
 
-    "For all of history, the creative economy selected for ideas worth the cost of making. Every medium "
-    "charged a price for trying the idea that probably wouldn't work, so most of those ideas were never "
-    "tried. The strange book stayed a note in a drawer. That price just collapsed. Now we can select for "
-    "ideas worth making — and when experimentation gets cheap, creativity becomes play again. The old "
-    "pulps knew what to do with cheap: wild premises, new writers, another one next month. Pulp "
-    "democratized publishing. Neopulp democratizes experimentation.",
+    "Before the machine, trying an idea could cost years, so most ideas were never tried. The strange "
+    "book stayed a note in a drawer. The machine removes that friction, and the strange book gets made. "
+    "Pulp democratized publishing. Neopulp democratizes experimentation.",
 
-    "Good work, in any medium, by any means, is a concentrated form of intention. That is what the mark "
-    "on this book certifies: not that a human typed it, but that a human created it, shaped it, judged it, "
-    "and wouldn't sign it until every word was one they'd stand behind. It says so on the title page, at "
-    "byline scale, without hedging, because a new medium is nothing to apologize for. It never was. Ask "
-    "the camera.",
+    "The mark tells you what was done with that freedom: a human created this book, shaped it, judged "
+    "it, and wouldn't sign it until every word was one they'd stand behind. It says so on the title "
+    "page, without hedging, because a new medium is nothing to apologize for. Ask the camera.",
 
     "A book isn't good because a human wrote every word, and it isn't bad because a machine wrote any of "
     "them. Judge the work first. The means of creation are not the measure of it. You will decide.",
@@ -73,20 +68,28 @@ def build(out, fonts, qr):
     c.setAuthor("neopulp"); c.setCreator("neopulp.possibility.com")
     c.setTitle("A note to the reader — neopulp")
 
-    # header
-    tracked(c, KICKER, 590.4, "JetBrainsMono-Regular", 8, DIM, 3.2)
-    c.setFillColor(INK); c.setFont("Archivo-Black", 24)
-    c.drawCentredString(W / 2, 560.16, TITLE)
-    c.setLineWidth(1.6); c.line(W / 2 - 21.6, 544.32, W / 2 + 21.6, 544.32)
-
-    # body: centred paragraphs flowing down from a fixed top
+    # body: centred paragraphs flowing down from the top of the text block
     style = ParagraphStyle("body", fontName="Archivo-Regular", fontSize=9.2, leading=12.9,
                            alignment=TA_CENTER, textColor=BODY)
     width = W - 2 * MARGIN
     gap = 7.92
-    y = 522.72  # top of the first paragraph (445.32 + 6 lines x 12.9 in the 09-03 build)
-    for text in PARAS:
-        p = Paragraph(text, style)
+    paras = [Paragraph(t, style) for t in PARAS]
+    body_h = sum(p.wrap(width, H)[1] for p in paras) + gap * (len(paras) - 1)
+
+    # The 09-03 page filled the sheet: kicker 57.6 from the top, tagline 13.5 above the QR.
+    # With less text, split the slack evenly above the kicker and below the tagline.
+    TOP_KICKER, BODY_TOP, BODY_H_0903, TAGLINE_0903 = 590.4, 522.72, 295.38, 162.54
+    dy = (BODY_H_0903 - body_h) / 2
+    c.translate(0, -dy)
+
+    # header
+    tracked(c, KICKER, TOP_KICKER, "JetBrainsMono-Regular", 8, DIM, 3.2)
+    c.setFillColor(INK); c.setFont("Archivo-Black", 24)
+    c.drawCentredString(W / 2, 560.16, TITLE)
+    c.setLineWidth(1.6); c.line(W / 2 - 21.6, 544.32, W / 2 + 21.6, 544.32)
+
+    y = BODY_TOP
+    for p in paras:
         _, h = p.wrap(width, H)
         y -= h
         p.drawOn(c, MARGIN, y)
@@ -99,6 +102,7 @@ def build(out, fonts, qr):
     tracked(c, PROMISE_CAP, y - 36.72, "JetBrainsMono-Regular", 6.8, DIM, 2.6)
     c.setFillColor(INK); c.setFont("Archivo-Bold", 10.5)
     c.drawCentredString(W / 2, y - 65.52, TAGLINE)
+    c.translate(0, dy)
 
     # footer, fixed to the page bottom
     c.drawImage(qr, W / 2 - 32.4, 84.24, 64.8, 64.8, mask="auto")
