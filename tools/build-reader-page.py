@@ -31,8 +31,8 @@ PARAS = [
     "The author is the one who takes responsibility for it: I created this, I shaped it, I judged it, "
     "and I stand behind it.",
 
-    "Before the machine, trying an idea could cost years, so most ideas were never tried. The strange "
-    "book stayed a note in a drawer. The machine removes that friction, and the strange book gets made. "
+    "Before the machine, trying an idea could cost years, so most ideas were never tried. The creative "
+    "book stayed a note in a drawer. The machine removes that friction, and the creative book gets made. "
     "Pulp democratized publishing. Neopulp democratizes experimentation.",
 
     "The mark tells you what was done with that freedom: a human created this book, shaped it, judged "
