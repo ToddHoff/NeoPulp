@@ -6,7 +6,7 @@ A neopulp is a book a person created, shaped and judged — and a machine wrote 
 
 Before the machine, trying an idea could cost years, so most ideas were never tried. The creative book stayed a note in a drawer. The machine removes that friction, and the creative book gets made. Pulp democratized publishing. Neopulp democratizes experimentation.
 
-The mark tells you what was done with that freedom: a human created this book, shaped it, judged it, and wouldn't sign it until every word was one they'd stand behind. It says so on the title page, without hedging, because a new medium is nothing to apologize for. Ask the camera.
+The mark tells you what was done with that freedom: a human wouldn't sign this book until every word was one they'd stand behind. It says so on the title page, without hedging, because a new medium is nothing to apologize for. Ask the camera.
 
 A book isn't good because a human wrote every word, and it isn't bad because a machine wrote any of them. Judge the work first. The means of creation are not the measure of it. You will decide.
 
