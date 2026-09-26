@@ -25,7 +25,9 @@ BODY = Color(.25, .23, .2)
 DIM = Color(.43, .42, .38)
 
 KICKER = "A NOTE TO THE READER"
-TITLE = "This book is a neopulp."
+# the credit line, set as the headline in three balanced lines
+TITLE = ["Created, shaped and judged", "by the author.", "Written with a machine."]
+TITLE_SIZE, TITLE_LEAD = 20, 23
 PARAS = [
     "A neopulp is a book a person created, shaped and judged \u2014 and a machine wrote with them. "
     "The author is the one who takes responsibility for it: I created this, I shaped it, I judged it, "
@@ -34,10 +36,6 @@ PARAS = [
     "Before the machine, trying an idea could cost years, so most ideas were never tried. The creative "
     "book stayed a note in a drawer. The machine removes that friction, and the creative book gets made. "
     "Pulp democratized publishing. Neopulp democratizes experimentation.",
-
-    "The mark tells you what was done with that freedom: a human wouldn't sign this book until every "
-    "word was one they'd stand behind. It says so on the title page, without hedging, because a new "
-    "medium is nothing to apologize for. Ask the camera.",
 
     "A book isn't good because a human wrote every word, and it isn't bad because a machine wrote any of "
     "them. Judge the work first. The means of creation are not the measure of it. You will decide.",
@@ -79,16 +77,18 @@ def build(out, fonts, qr):
     # The 09-03 page filled the sheet: kicker 57.6 from the top, tagline 13.5 above the QR.
     # With less text, split the slack evenly above the kicker and below the tagline.
     TOP_KICKER, BODY_TOP, BODY_H_0903, TAGLINE_0903 = 590.4, 522.72, 295.38, 162.54
-    dy = (BODY_H_0903 - body_h) / 2
+    extra = TITLE_LEAD * (len(TITLE) - 1)  # a multi-line headline pushes the rule and body down
+    dy = (BODY_H_0903 - body_h - extra) / 2
     c.translate(0, -dy)
 
     # header
     tracked(c, KICKER, TOP_KICKER, "JetBrainsMono-Regular", 8, DIM, 3.2)
-    c.setFillColor(INK); c.setFont("Archivo-Black", 24)
-    c.drawCentredString(W / 2, 560.16, TITLE)
-    c.setLineWidth(1.6); c.line(W / 2 - 21.6, 544.32, W / 2 + 21.6, 544.32)
+    c.setFillColor(INK); c.setFont("Archivo-Black", TITLE_SIZE)
+    for i, line in enumerate(TITLE):
+        c.drawCentredString(W / 2, 560.16 - i * TITLE_LEAD, line)
+    c.setLineWidth(1.6); c.line(W / 2 - 21.6, 544.32 - extra, W / 2 + 21.6, 544.32 - extra)
 
-    y = BODY_TOP
+    y = BODY_TOP - extra
     for p in paras:
         _, h = p.wrap(width, H)
         y -= h
